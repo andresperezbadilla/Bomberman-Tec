@@ -5,6 +5,8 @@
  */
 package bomberman;
 
+import bombermanGraphic.StartGame;
+
 /**
  *
  * @author User
@@ -16,6 +18,9 @@ public class Bomberman {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        StartGame window = new StartGame();
+        window.setVisible(true);
     }
     
 }

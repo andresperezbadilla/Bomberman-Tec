@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bomberman.Logic;
+package bombermanLogic;
 
 /**
  *
  * @author User
  */
-public class EmptySpace extends Element{
+public class Bomb extends Element{
 
-    public EmptySpace() {
-        super(6);
+    public Bomb() {
+        super(7);
     }
     
     

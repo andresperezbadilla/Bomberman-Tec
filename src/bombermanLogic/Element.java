@@ -3,14 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bomberman.Logic;
+package bombermanLogic;
 
 /**
  *
  * @author User
  */
-public interface CreateGame {
+public class Element {
     
-    public Game createGame (int size,int DestructibleBlock, int Balloons,int Barrels,int sizeImage);
+    private int code;
+
+    public Element(int code) {
+        this.code = code;
+    }
+
+    
+    
     
 }

@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bomberman.Logic;
+package bombermanLogic;
 
 /**
  *
  * @author User
  */
-public class BarrierBlock extends Element{
+public class DestructibleBlock extends Element{
+    
+    private int hidden;
 
-    public BarrierBlock() {
-        super(4);
+    public DestructibleBlock(int hidden) {
+        super(5);
+        this.hidden = hidden;
     }
     
     

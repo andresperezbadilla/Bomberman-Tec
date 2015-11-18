@@ -3,17 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bomberman.Logic;
+package bombermanLogic;
 
 /**
  *
  * @author User
  */
-public class FactoryGame implements CreateGame{
+public class Barrels extends MobileElements{
+
+    public Barrels() {
+        super(3);
+    }
+    
+    
 
     @Override
-    public Game createGame(int size, int DestructibleBlock, int Balloons, int Barrels,int sizeImage) {
+    public int move() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     
 }

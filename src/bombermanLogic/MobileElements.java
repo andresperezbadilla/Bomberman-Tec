@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bomberman.Logic;
+package bombermanLogic;
 
 /**
  *
  * @author User
  */
-public class Bomb extends Element{
+public abstract class MobileElements extends Element{
 
-    public Bomb() {
-        super(7);
+    public MobileElements(int code) {
+        super(code);
     }
-    
-    
+
+   
+    public abstract int move();
     
 }

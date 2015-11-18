@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bomberman.Logic;
+package bombermanLogic;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -34,6 +34,7 @@ public class GlobalSingleton {
     private int mediumBarrels;
     private int difficultBarrels;
     
+    
     private GlobalSingleton() {
     }
     
@@ -56,6 +57,8 @@ public class GlobalSingleton {
             globals.easyBarrels = 3;
             globals.mediumBarrels = 5;
             globals.difficultBarrels = 10;
+            
+            
         }
         
         return globals;
