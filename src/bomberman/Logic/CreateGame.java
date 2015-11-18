@@ -9,15 +9,8 @@ package bomberman.Logic;
  *
  * @author User
  */
-public class DestructibleBlock extends Element{
+public interface CreateGame {
     
-    private int hidden;
-
-    public DestructibleBlock(int hidden) {
-        super(5);
-        this.hidden = hidden;
-    }
-    
-    
+    public Game createGame (int size,int DestructibleBlock, int Balloons,int Barrels,int sizeImage);
     
 }

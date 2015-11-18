@@ -9,14 +9,12 @@ package bomberman.Logic;
  *
  * @author User
  */
-public class DestructibleBlock extends Element{
-    
-    private int hidden;
+public class GameGraphic extends Game {
 
-    public DestructibleBlock(int hidden) {
-        super(5);
-        this.hidden = hidden;
+    public GameGraphic(int size, int DestructibleBlock, int balloons, int barrels,int sizeImage) {
+        super(size, DestructibleBlock, balloons, barrels,sizeImage);
     }
+    
     
     
     

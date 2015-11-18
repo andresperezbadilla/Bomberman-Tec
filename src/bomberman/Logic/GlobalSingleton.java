@@ -21,6 +21,9 @@ public class GlobalSingleton {
     private int easyGame;
     private int mediumGame;
     private int difficultGame;
+    private int easyImage;
+    private int mediumImage;
+    private int difficulImage;
     private int easyDestructibleBlock;
     private int mediumDestructibleBlock;
     private int difficultDestructibleBlock;
@@ -41,6 +44,9 @@ public class GlobalSingleton {
             globals.easyGame = 15;
             globals.mediumGame = 21;
             globals.difficultGame = 25;
+            globals.easyImage = 45;
+            globals.mediumImage = 30;
+            globals.difficulImage = 25;
             globals.easyDestructibleBlock = 35;
             globals.mediumDestructibleBlock = 75;
             globals.difficultDestructibleBlock = 120;
@@ -59,6 +65,30 @@ public class GlobalSingleton {
 
     public JPanel getPanel() {
         return globals.panel;
+    }
+
+    public int getEasyImage() {
+        return easyImage;
+    }
+
+    public void setEasyImage(int easyImage) {
+        this.easyImage = easyImage;
+    }
+
+    public int getMediumImage() {
+        return mediumImage;
+    }
+
+    public void setMediumImage(int mediumImage) {
+        this.mediumImage = mediumImage;
+    }
+
+    public int getDifficulImage() {
+        return difficulImage;
+    }
+
+    public void setDifficulImage(int difficulImage) {
+        this.difficulImage = difficulImage;
     }
 
     public void setPanel(JPanel panel) {
