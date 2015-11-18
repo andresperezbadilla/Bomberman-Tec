@@ -10,5 +10,11 @@ package bomberman.Logic;
  * @author User
  */
 public class EmptySpace extends Element{
+
+    public EmptySpace() {
+        super(6);
+    }
+    
+    
     
 }

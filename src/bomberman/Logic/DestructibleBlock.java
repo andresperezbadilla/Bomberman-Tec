@@ -10,7 +10,11 @@ package bomberman.Logic;
  * @author User
  */
 public class DestructibleBlock extends Element{
-    private boolean door;
-    private boolean power;
+
+    public DestructibleBlock() {
+        super(5);
+    }
+    
+    
     
 }

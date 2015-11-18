@@ -10,8 +10,12 @@ package bomberman.Logic;
  * @author User
  */
 public abstract class MobileElements extends Element{
-    
-    
+
+    public MobileElements(int code) {
+        super(code);
+    }
+
+   
     public abstract int move();
     
 }

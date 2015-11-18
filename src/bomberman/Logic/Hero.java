@@ -11,6 +11,12 @@ package bomberman.Logic;
  */
 public class Hero extends MobileElements{
 
+    public Hero() {
+        super(1);
+    }
+    
+    
+
     @Override
     public int move() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

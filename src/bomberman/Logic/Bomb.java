@@ -10,5 +10,11 @@ package bomberman.Logic;
  * @author User
  */
 public class Bomb extends Element{
+
+    public Bomb() {
+        super(7);
+    }
+    
+    
     
 }

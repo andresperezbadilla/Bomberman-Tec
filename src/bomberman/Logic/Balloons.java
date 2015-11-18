@@ -11,6 +11,14 @@ package bomberman.Logic;
  */
 public class Balloons extends MobileElements{
 
+    public Balloons() {
+        super(2);
+    }
+
+    
+    
+    
+
     @Override
     public int move() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

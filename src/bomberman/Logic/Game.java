@@ -5,10 +5,19 @@
  */
 package bomberman.Logic;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author User
  */
 public class Game {
+    
+    private GlobalSingleton globals = GlobalSingleton.getGlobalSingleton();
+    
+    Element [][] logic;
+    JLabel [][] graphic;
+    
+    
     
 }

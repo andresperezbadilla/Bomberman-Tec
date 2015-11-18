@@ -10,5 +10,14 @@ package bomberman.Logic;
  * @author User
  */
 public class Element {
-    private String code;
+    
+    private int code;
+
+    public Element(int code) {
+        this.code = code;
+    }
+
+    
+    
+    
 }
