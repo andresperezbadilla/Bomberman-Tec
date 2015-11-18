@@ -17,6 +17,14 @@ public class DestructibleBlock extends Element{
         super(5);
         this.hidden = hidden;
     }
+
+    public int getHidden() {
+        return hidden;
+    }
+
+    public void setHidden(int hidden) {
+        this.hidden = hidden;
+    }
     
     
     

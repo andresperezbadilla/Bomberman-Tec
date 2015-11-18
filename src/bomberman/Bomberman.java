@@ -6,6 +6,7 @@
 package bomberman;
 
 import bombermanGraphic.StartGame;
+import bombermanLogic.GameLogic;
 
 /**
  *
@@ -21,6 +22,7 @@ public class Bomberman {
         
         StartGame window = new StartGame();
         window.setVisible(true);
-    }
-    
+        
+        
+    }   
 }

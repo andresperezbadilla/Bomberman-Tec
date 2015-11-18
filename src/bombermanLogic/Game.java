@@ -25,6 +25,49 @@ public class Game {
         this.sizeImage = sizeImage;
                 
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int getDestructibleBlock() {
+        return DestructibleBlock;
+    }
+
+    public void setDestructibleBlock(int DestructibleBlock) {
+        this.DestructibleBlock = DestructibleBlock;
+    }
+
+    public int getBalloons() {
+        return balloons;
+    }
+
+    public void setBalloons(int balloons) {
+        this.balloons = balloons;
+    }
+
+    public int getBarrels() {
+        return barrels;
+    }
+
+    public void setBarrels(int barrels) {
+        this.barrels = barrels;
+    }
+
+    public int getSizeImage() {
+        return sizeImage;
+    }
+
+    public void setSizeImage(int sizeImage) {
+        this.sizeImage = sizeImage;
+    }
+    
+    
+    
     
     
     

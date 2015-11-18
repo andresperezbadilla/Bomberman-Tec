@@ -10,7 +10,7 @@ package bombermanLogic;
  * @author User
  */
 public class BarrierBlock extends Element{
-
+    
     public BarrierBlock() {
         super(4);
     }
