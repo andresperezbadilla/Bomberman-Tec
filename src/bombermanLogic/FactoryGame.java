@@ -14,41 +14,21 @@ public class FactoryGame implements CreateGame{
     @Override
     public Game createGame(int size, int DestructibleBlock, int Balloons, int Barrels,int sizeImage) {
         if(size == 15){
-            GameLogic game = new GameLogic(size,DestructibleBlock,Balloons,Barrels,sizeImage);
-            game.insertEmptySpace(game.getSize());
-            game.insertBarrierBlock(game.getSize());
-            game.insertHero();
-            game.insertDestructibleBlock(game.getDestructibleBlock());
-            game.insertBalloons(game.getBalloons());
-            game.insertBarrels(game.getBarrels());
-            game.viewMatriz();
-            game.getLogicMatriz();
-            return game;
+            Game game = new Game(size,DestructibleBlock,Balloons,Barrels,sizeImage);
+            return  game;
+               
         }
         
         else if(size == 21){
-            GameLogic game = new GameLogic(size,DestructibleBlock,Balloons,Barrels,sizeImage);
-            game.insertEmptySpace(game.getSize());
-            game.insertBarrierBlock(game.getSize());
-            game.insertBalloons(game.getBalloons());
-            game.insertBarrels(game.getBarrels());
-            game.insertHero();
-            game.insertDestructibleBlock(game.getDestructibleBlock());
-            game.viewMatriz();
-            return game;
+            Game game = new Game(size,DestructibleBlock,Balloons,Barrels,sizeImage);
+            return  game;
+            
         }
         
         else if(size == 25){
-            GameLogic game = new GameLogic(size,DestructibleBlock,Balloons,Barrels,sizeImage);
-            game.insertEmptySpace(game.getSize());
-            game.insertBarrierBlock(game.getSize());
-            game.insertBalloons(game.getBalloons());
-            game.insertBarrels(game.getBarrels());
-            game.insertHero();
-            game.insertDestructibleBlock(game.getDestructibleBlock());
+            Game game = new Game(size,DestructibleBlock,Balloons,Barrels,sizeImage);
+            return  game;
             
-            game.viewMatriz();
-            return game;
         }
         return null;
     }

@@ -6,7 +6,10 @@
 package bomberman;
 
 import bombermanGraphic.StartGame;
+import bombermanLogic.GameGraphic;
 import bombermanLogic.GameLogic;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 
 /**
  *
@@ -19,9 +22,12 @@ public class Bomberman {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+       
         StartGame window = new StartGame();
         window.setVisible(true);
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        
         
         
     }   

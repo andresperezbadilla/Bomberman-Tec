@@ -10,14 +10,68 @@ import java.util.Random;
  *
  * @author User
  */
-public class GameLogic extends Game{
+public class GameLogic{
     
     Element [][] logicMatriz;
+    private int size;
+    private int DestructibleBlock;
+    private int balloons;
+    private int barrels;
+    private int sizeImage;
+    
+    
 
     public GameLogic(int size, int DestructibleBlock, int balloons, int barrels,int sizeImage) {
-        super(size, DestructibleBlock, balloons, barrels,sizeImage);
-        logicMatriz = new Element [size][size];
+        
+        this.logicMatriz = new Element[size][size];
+        this.size = size;
+        this.DestructibleBlock = DestructibleBlock;
+        this.balloons = balloons;
+        this.barrels = barrels;
+        this.sizeImage = sizeImage;
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public int getDestructibleBlock() {
+        return DestructibleBlock;
+    }
+
+    public void setDestructibleBlock(int DestructibleBlock) {
+        this.DestructibleBlock = DestructibleBlock;
+    }
+
+    public int getBalloons() {
+        return balloons;
+    }
+
+    public void setBalloons(int balloons) {
+        this.balloons = balloons;
+    }
+
+    public int getBarrels() {
+        return barrels;
+    }
+
+    public void setBarrels(int barrels) {
+        this.barrels = barrels;
+    }
+
+    public int getSizeImage() {
+        return sizeImage;
+    }
+
+    public void setSizeImage(int sizeImage) {
+        this.sizeImage = sizeImage;
+    }
+    
+    
 
     public void insertBarrierBlock(int size){
     
@@ -96,8 +150,8 @@ public class GameLogic extends Game{
 
         for(int cont = balloons; cont!=0;){
            Random rnd = new Random();
-           int posX = rnd.nextInt(super.getSize());
-           int posY = rnd.nextInt(super.getSize());
+           int posX = rnd.nextInt(size);
+           int posY = rnd.nextInt(size);
            System.out.println("x:"+posX+"y:"+posY);
            System.out.println(logicMatriz[posX][posY].getCode());
             if(logicMatriz[posX][posY].getCode()==6){
@@ -118,8 +172,8 @@ public class GameLogic extends Game{
 
         for(int cont = barrels; cont!=0;){
            Random rnd = new Random();
-           int posX = rnd.nextInt(super.getSize());
-           int posY = rnd.nextInt(super.getSize());
+           int posX = rnd.nextInt(size);
+           int posY = rnd.nextInt(size);
            System.out.println("x:"+posX+"y:"+posY);
            System.out.println(logicMatriz[posX][posY].getCode());
             if(logicMatriz[posX][posY].getCode()==6){
@@ -140,8 +194,8 @@ public class GameLogic extends Game{
 
         for(int cont = bloks; cont!=0;){
            Random rnd = new Random();
-           int posX = rnd.nextInt(super.getSize());
-           int posY = rnd.nextInt(super.getSize());
+           int posX = rnd.nextInt(size);
+           int posY = rnd.nextInt(size);
            System.out.println("x:"+posX+"y:"+posY);
            System.out.println(logicMatriz[posX][posY].getCode());
             if(logicMatriz[posX][posY].getCode()==6){

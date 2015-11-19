@@ -45,7 +45,7 @@ public class GlobalSingleton {
             globals.easyGame = 15;
             globals.mediumGame = 21;
             globals.difficultGame = 25;
-            globals.easyImage = 45;
+            globals.easyImage = 42;
             globals.mediumImage = 30;
             globals.difficulImage = 25;
             globals.easyDestructibleBlock = 35;

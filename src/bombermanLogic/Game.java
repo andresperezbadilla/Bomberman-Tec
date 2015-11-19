@@ -5,17 +5,24 @@
  */
 package bombermanLogic;
 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+
 /**
  *
  * @author User
  */
 public class Game {
-    
+
     private int size;
     private int DestructibleBlock;
     private int balloons;
     private int barrels;
     private int sizeImage;
+    GameLogic gameLogic;
+    GameGraphic gameGraphic;
+    
+    
 
     public Game(int size, int DestructibleBlock, int balloons, int barrels,int sizeImage) {
         this.size = size;
@@ -23,6 +30,22 @@ public class Game {
         this.balloons = balloons;
         this.barrels = barrels;
         this.sizeImage = sizeImage;
+        gameLogic = new GameLogic(size, DestructibleBlock, balloons, barrels, sizeImage);
+        gameLogic.insertEmptySpace(gameLogic.getSize());
+        gameLogic.insertBarrierBlock(gameLogic.getSize());
+        gameLogic.insertHero();
+        gameLogic.insertDestructibleBlock(gameLogic.getDestructibleBlock());
+        gameLogic.insertBalloons(gameLogic.getBalloons());
+        gameLogic.insertBarrels(gameLogic.getBarrels());
+        //gameLogic.viewMatriz();
+        gameGraphic = new GameGraphic(gameLogic);
+        gameGraphic.setSize(647,669);
+        gameGraphic.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gameGraphic.setTitle("Bomberman");
+        //gameGraphic.setIconImage(new ImageIcon(getClass().getResource("/Images/Bomb.png")).getImage());
+        gameGraphic.setLocationRelativeTo(null);
+        gameGraphic.setVisible(true);
+        
                 
     }
 
