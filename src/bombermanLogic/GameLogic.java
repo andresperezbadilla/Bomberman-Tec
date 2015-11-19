@@ -12,7 +12,8 @@ import java.util.Random;
  */
 public class GameLogic{
     
-    Element [][] logicMatriz;
+    private Element [][] logicMatriz;
+    private Hero hero = new Hero();
     private int size;
     private int DestructibleBlock;
     private int balloons;
@@ -69,6 +70,14 @@ public class GameLogic{
 
     public void setSizeImage(int sizeImage) {
         this.sizeImage = sizeImage;
+    }
+
+    public Hero getHero() {
+        return hero;
+    }
+
+    public void setHero(Hero hero) {
+        this.hero = hero;
     }
     
     
@@ -139,11 +148,8 @@ public class GameLogic{
     }
     
     public void insertHero(){
-        Hero hero = new Hero();
-        
         logicMatriz [1][1] = hero;
-        
-        
+
     }
     
     public void insertBalloons(int balloons){

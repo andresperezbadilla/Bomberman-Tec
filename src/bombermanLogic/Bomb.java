@@ -15,6 +15,6 @@ public class Bomb extends Element{
         super(7);
     }
     
-    
+    public void explodeBomb(){}
     
 }

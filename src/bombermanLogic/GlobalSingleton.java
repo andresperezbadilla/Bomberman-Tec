@@ -17,7 +17,9 @@ public class GlobalSingleton {
     public static GlobalSingleton globals;
     
     
-    private JPanel panel;
+    private GameLogic logic;
+    private GameGraphic graphic;
+   
     private int easyGame;
     private int mediumGame;
     private int difficultGame;
@@ -41,7 +43,6 @@ public class GlobalSingleton {
     public static GlobalSingleton getGlobalSingleton(){
         if(globals == null){
             globals = new GlobalSingleton();
-            globals.panel = new JPanel();
             globals.easyGame = 15;
             globals.mediumGame = 21;
             globals.difficultGame = 25;
@@ -57,6 +58,8 @@ public class GlobalSingleton {
             globals.easyBarrels = 3;
             globals.mediumBarrels = 5;
             globals.difficultBarrels = 10;
+            globals.logic = null;
+            globals.graphic = null;
             
             
         }
@@ -64,38 +67,46 @@ public class GlobalSingleton {
         return globals;
     }
 
-   
-
-    public JPanel getPanel() {
-        return globals.panel;
+    public GameGraphic getGraphic() {
+        return globals.graphic;
     }
 
+    public void setGraphic(GameGraphic graphic) {
+        globals.graphic = graphic;
+    }
+
+    public GameLogic getLogic() {
+        return globals.logic;
+    }
+
+    public void setLogic(GameLogic logic) {
+        globals.logic = logic;
+    }
+
+    
+
     public int getEasyImage() {
-        return easyImage;
+        return globals.easyImage;
     }
 
     public void setEasyImage(int easyImage) {
-        this.easyImage = easyImage;
+        globals.easyImage = easyImage;
     }
 
     public int getMediumImage() {
-        return mediumImage;
+        return globals.mediumImage;
     }
 
     public void setMediumImage(int mediumImage) {
-        this.mediumImage = mediumImage;
+        globals.mediumImage = mediumImage;
     }
 
     public int getDifficulImage() {
-        return difficulImage;
+        return globals.difficulImage;
     }
 
     public void setDifficulImage(int difficulImage) {
-        this.difficulImage = difficulImage;
-    }
-
-    public void setPanel(JPanel panel) {
-        globals.panel = panel;
+        globals.difficulImage = difficulImage;
     }
 
     public int getEasyGame() {

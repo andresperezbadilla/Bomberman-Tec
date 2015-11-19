@@ -5,22 +5,74 @@
  */
 package bombermanLogic;
 
+import java.awt.Image;
+import java.net.URL;
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author User
  */
-public class Hero extends MobileElements{
-
+public class Hero extends Element{
+    GlobalSingleton globals = GlobalSingleton.getGlobalSingleton();
     public Hero() {
         super(1);
     }
-    
-    
 
-    @Override
-    public int move() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void moveUp(int posX,int posY) {
+       GameLogic gameLogic = globals.getLogic();
+       EmptySpace empty = new EmptySpace();
+       gameLogic.getLogicMatriz()[posX+1][posY] = empty;
+       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
+           gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       }
+       
+       
+       
+       
+       
     }
+    
+    public void moveDown(int posX,int posY){
+       GameLogic gameLogic = globals.getLogic();
+       EmptySpace empty = new EmptySpace();
+       gameLogic.getLogicMatriz()[posX-1][posY] = empty;
+       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
+       gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       }
+       
+       
+
+       
+    }
+    
+    public void moveRight(int posX,int posY){
+       GameLogic gameLogic = globals.getLogic();
+       EmptySpace empty = new EmptySpace();
+       gameLogic.getLogicMatriz()[posX][posY-1] = empty;
+       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
+           gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       }
+       
+       
+       
+        
+    }
+    
+    public void moveLeft(int posX,int posY){
+       GameLogic gameLogic = globals.getLogic();
+       EmptySpace empty = new EmptySpace();
+       gameLogic.getLogicMatriz()[posX][posY+1] = empty;
+       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
+           gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       }
+       
+       
+       
+        
+    }
+    
+    
     
     
 }

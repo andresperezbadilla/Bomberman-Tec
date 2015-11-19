@@ -118,7 +118,7 @@ public class StartGame extends javax.swing.JFrame {
         
         if (position == 0){
             //size,DestructibleBlock,Balloons,Barrels,sizeImage
-            
+            setVisible(false);
             factory.createGame(globals.getEasyGame(),globals.getEasyDestructibleBlock(),
                     globals.getEasyBalloons(),globals.getEasyBarrels(),globals.getEasyImage());
                
@@ -127,18 +127,23 @@ public class StartGame extends javax.swing.JFrame {
         
         else if (position == 1){
             //size,DestructibleBlock,Balloons,Barrels,sizeImage
+            setVisible(false);
             factory.createGame(globals.getMediumGame(),globals.getMediumDestructibleBlock(),
                     globals.getMediumBalloons(),globals.getMediumBarrels(),globals.getMediumImage());
+            
             
         }
         
         else{
             //size,DestructibleBlock,Balloons,Barrels,sizeImage
+            setVisible(false);
             factory.createGame(globals.getDifficultGame(),globals.getDifficultDestructibleBlock(),
                     globals.getDifficultBalloons(),globals.getDifficultBarrels(),
                     globals.getDifficulImage());
             
         }
+        
+        
     }//GEN-LAST:event_StartGameActionPerformed
 
     /**

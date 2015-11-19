@@ -5,6 +5,7 @@
  */
 package bombermanLogic;
 
+import bombermanGraphic.StartGame;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
@@ -13,6 +14,7 @@ import javax.swing.JFrame;
  * @author User
  */
 public class Game {
+    GlobalSingleton globals = GlobalSingleton.getGlobalSingleton();
 
     private int size;
     private int DestructibleBlock;
@@ -37,6 +39,7 @@ public class Game {
         gameLogic.insertDestructibleBlock(gameLogic.getDestructibleBlock());
         gameLogic.insertBalloons(gameLogic.getBalloons());
         gameLogic.insertBarrels(gameLogic.getBarrels());
+        globals.setLogic(gameLogic);
         //gameLogic.viewMatriz();
         gameGraphic = new GameGraphic(gameLogic);
         gameGraphic.setSize(647,669);
@@ -45,6 +48,8 @@ public class Game {
         //gameGraphic.setIconImage(new ImageIcon(getClass().getResource("/Images/Bomb.png")).getImage());
         gameGraphic.setLocationRelativeTo(null);
         gameGraphic.setVisible(true);
+        
+        
         
                 
     }
