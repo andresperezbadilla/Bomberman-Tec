@@ -11,6 +11,6 @@ package bombermanLogic;
  */
 public interface CreateGame {
     
-    public Game createGame (int size,int DestructibleBlock, int Balloons,int Barrels,int sizeImage);
+    public Game createGame (int size,int DestructibleBlock, int Balloons,int Barrels,int sizeImage,int power);
     
 }

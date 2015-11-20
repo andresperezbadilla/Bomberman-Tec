@@ -8,6 +8,7 @@ package bombermanGraphic;
 
 import bombermanLogic.FactoryGame;
 import bombermanLogic.GlobalSingleton;
+import bombermanSound.Sounds;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
@@ -20,6 +21,9 @@ import javax.swing.JPanel;
 public class StartGame extends javax.swing.JFrame {
     GlobalSingleton globals = GlobalSingleton.getGlobalSingleton();
     FactoryGame factory = new FactoryGame();
+    Sounds s = new Sounds();
+    
+    
     
     
 
@@ -38,8 +42,10 @@ public class StartGame extends javax.swing.JFrame {
         fondo.setIcon(uno);
         getLayeredPane().add(fondo,JLayeredPane.FRAME_CONTENT_LAYER);
         fondo.setBounds(0, 0, uno.getIconWidth(), uno.getIconHeight());
+        s.startGame();
         
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -113,6 +119,8 @@ public class StartGame extends javax.swing.JFrame {
 
     private void StartGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartGameActionPerformed
         // TODO add your handling code here:
+        s.stoped();
+       
         
         int position = ComboBox1.getSelectedIndex();
         
@@ -120,7 +128,7 @@ public class StartGame extends javax.swing.JFrame {
             //size,DestructibleBlock,Balloons,Barrels,sizeImage
             setVisible(false);
             factory.createGame(globals.getEasyGame(),globals.getEasyDestructibleBlock(),
-                    globals.getEasyBalloons(),globals.getEasyBarrels(),globals.getEasyImage());
+                    globals.getEasyBalloons(),globals.getEasyBarrels(),globals.getEasyImage(),globals.getEasyPower());
                
             
         }
@@ -129,7 +137,7 @@ public class StartGame extends javax.swing.JFrame {
             //size,DestructibleBlock,Balloons,Barrels,sizeImage
             setVisible(false);
             factory.createGame(globals.getMediumGame(),globals.getMediumDestructibleBlock(),
-                    globals.getMediumBalloons(),globals.getMediumBarrels(),globals.getMediumImage());
+                    globals.getMediumBalloons(),globals.getMediumBarrels(),globals.getMediumImage(),globals.getMediumPower());
             
             
         }
@@ -139,7 +147,7 @@ public class StartGame extends javax.swing.JFrame {
             setVisible(false);
             factory.createGame(globals.getDifficultGame(),globals.getDifficultDestructibleBlock(),
                     globals.getDifficultBalloons(),globals.getDifficultBarrels(),
-                    globals.getDifficulImage());
+                    globals.getDifficulImage(),globals.getDifficultPower());
             
         }
         

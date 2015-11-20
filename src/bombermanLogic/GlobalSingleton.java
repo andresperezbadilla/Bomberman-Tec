@@ -35,6 +35,9 @@ public class GlobalSingleton {
     private int easyBarrels;
     private int mediumBarrels;
     private int difficultBarrels;
+    private int easyPower;
+    private int mediumPower;
+    private int difficultPower;
     
     
     private GlobalSingleton() {
@@ -58,8 +61,12 @@ public class GlobalSingleton {
             globals.easyBarrels = 3;
             globals.mediumBarrels = 5;
             globals.difficultBarrels = 10;
+            globals.easyPower = 3;
+            globals.mediumPower = 2;
+            globals.difficultPower = 1;
             globals.logic = null;
             globals.graphic = null;
+            
             
             
         }
@@ -67,6 +74,32 @@ public class GlobalSingleton {
         return globals;
     }
 
+    public int getEasyPower() {
+        return globals.easyPower;
+    }
+
+    public void setEasyPower(int easyPower) {
+        globals.easyPower = easyPower;
+    }
+
+    public int getMediumPower() {
+        return globals.mediumPower;
+    }
+
+    public void setMediumPower(int mediumPower) {
+        globals.mediumPower = mediumPower;
+    }
+
+    public int getDifficultPower() {
+        return globals.difficultPower;
+    }
+
+    public void setDifficultPower(int difficultPower) {
+        globals.difficultPower = difficultPower;
+    }
+    
+    
+    
     public GameGraphic getGraphic() {
         return globals.graphic;
     }

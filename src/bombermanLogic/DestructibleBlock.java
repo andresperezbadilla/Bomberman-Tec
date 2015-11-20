@@ -13,8 +13,8 @@ public class DestructibleBlock extends Element{
     
     private int hidden;
 
-    public DestructibleBlock(int hidden) {
-        super(5);
+    public DestructibleBlock(int code,int hidden) {
+        super(code);
         this.hidden = hidden;
     }
 

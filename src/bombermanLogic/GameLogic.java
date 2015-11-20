@@ -19,10 +19,11 @@ public class GameLogic{
     private int balloons;
     private int barrels;
     private int sizeImage;
+    private int power;
     
     
 
-    public GameLogic(int size, int DestructibleBlock, int balloons, int barrels,int sizeImage) {
+    public GameLogic(int size, int DestructibleBlock, int balloons, int barrels,int sizeImage,int power) {
         
         this.logicMatriz = new Element[size][size];
         this.size = size;
@@ -30,8 +31,19 @@ public class GameLogic{
         this.balloons = balloons;
         this.barrels = barrels;
         this.sizeImage = sizeImage;
+        this.power = power;
     }
 
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+    
+    
+    
     public int getSize() {
         return size;
     }
@@ -141,6 +153,19 @@ public class GameLogic{
                     System.out.print("░");
                 }
                 
+               else if(logicMatriz[x][y].getCode() == 7){
+                    System.out.print("@");
+                }
+               
+               else if ((logicMatriz[x][y].getCode() == 10)){
+                   System.out.print("#1");
+               }
+               
+               else if ((logicMatriz[x][y].getCode() == 11)){
+                   System.out.print("#2");
+               }
+                
+                
                 
             }
             System.out.println("");
@@ -196,8 +221,8 @@ public class GameLogic{
           
     }
     
-    public void insertDestructibleBlock(int bloks){
-
+    public void insertDestructibleBlock(int bloks, int power){
+        int contDoor = 1;
         for(int cont = bloks; cont!=0;){
            Random rnd = new Random();
            int posX = rnd.nextInt(size);
@@ -209,10 +234,26 @@ public class GameLogic{
                 }
                 else{     
                 int hidden = rnd.nextInt(3);
-                DestructibleBlock block = new DestructibleBlock(hidden);
-                logicMatriz[posX][posY]=block;
-                cont--;
-                    System.out.println("agrege destruible");
+                
+                if((contDoor !=0)&&(hidden==2)){
+                    DestructibleBlock block = new DestructibleBlock(10,2);
+                    logicMatriz[posX][posY]=block;
+                    cont--;
+                    contDoor--;
+                }
+                else if ((power!=0)&&(hidden==1)){
+                    DestructibleBlock block = new DestructibleBlock(11,1);
+                    logicMatriz[posX][posY]=block;
+                    cont--;
+                    power--;
+                }
+                
+                else{
+                    DestructibleBlock block = new DestructibleBlock(5,0);
+                    logicMatriz[posX][posY]=block;
+                    cont--;
+                }
+                    
                 }
             }
                

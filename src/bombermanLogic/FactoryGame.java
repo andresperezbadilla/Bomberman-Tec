@@ -12,21 +12,21 @@ package bombermanLogic;
 public class FactoryGame implements CreateGame{
 
     @Override
-    public Game createGame(int size, int DestructibleBlock, int Balloons, int Barrels,int sizeImage) {
+    public Game createGame(int size, int DestructibleBlock, int Balloons, int Barrels,int sizeImage,int power) {
         if(size == 15){
-            Game game = new Game(size,DestructibleBlock,Balloons,Barrels,sizeImage);
+            Game game = new Game(size, DestructibleBlock, Balloons, Barrels, sizeImage, power);
             return  game;
                
         }
         
         else if(size == 21){
-            Game game = new Game(size,DestructibleBlock,Balloons,Barrels,sizeImage);
+            Game game = new Game(size, DestructibleBlock, Balloons, Barrels, sizeImage, power);
             return  game;
             
         }
         
         else if(size == 25){
-            Game game = new Game(size,DestructibleBlock,Balloons,Barrels,sizeImage);
+            Game game = new Game(size, DestructibleBlock, Balloons, Barrels, sizeImage, power);
             return  game;
             
         }

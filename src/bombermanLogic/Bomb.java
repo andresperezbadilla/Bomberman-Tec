@@ -15,6 +15,9 @@ public class Bomb extends Element{
         super(7);
     }
     
-    public void explodeBomb(){}
+    public void explodeBomb(){
+        BombThread thread = new BombThread();
+        thread.start();
+    }
     
 }

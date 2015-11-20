@@ -8,6 +8,7 @@ package bomberman;
 import bombermanGraphic.StartGame;
 import bombermanLogic.GameGraphic;
 import bombermanLogic.GameLogic;
+import bombermanSound.Sounds;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 

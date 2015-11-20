@@ -22,50 +22,58 @@ public class Hero extends Element{
     public void moveUp(int posX,int posY) {
        GameLogic gameLogic = globals.getLogic();
        EmptySpace empty = new EmptySpace();
-       gameLogic.getLogicMatriz()[posX+1][posY] = empty;
-       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
-           gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       if(gameLogic.getLogicMatriz()[posY+1][posX].getCode()==7){
+       }
+       else{
+           gameLogic.getLogicMatriz()[posY+1][posX] = empty;
        }
        
-       
-       
-       
+       gameLogic.getLogicMatriz()[posY][posX] = gameLogic.getHero();
+
        
     }
     
     public void moveDown(int posX,int posY){
        GameLogic gameLogic = globals.getLogic();
        EmptySpace empty = new EmptySpace();
-       gameLogic.getLogicMatriz()[posX-1][posY] = empty;
-       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
-       gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       if(gameLogic.getLogicMatriz()[posY-1][posX].getCode()==7){
+           
+       }
+       else{
+         gameLogic.getLogicMatriz()[posY-1][posX] = empty;  
        }
        
-       
+       gameLogic.getLogicMatriz()[posY][posX] = gameLogic.getHero();
 
-       
     }
     
     public void moveRight(int posX,int posY){
        GameLogic gameLogic = globals.getLogic();
        EmptySpace empty = new EmptySpace();
-       gameLogic.getLogicMatriz()[posX][posY-1] = empty;
-       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
-           gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       if(gameLogic.getLogicMatriz()[posY][posX-1].getCode()==7){
+       
+       }
+       else{
+           gameLogic.getLogicMatriz()[posY][posX-1] = empty;
+       
        }
        
-       
-       
-        
+       gameLogic.getLogicMatriz()[posY][posX] = gameLogic.getHero();
+ 
     }
     
     public void moveLeft(int posX,int posY){
        GameLogic gameLogic = globals.getLogic();
        EmptySpace empty = new EmptySpace();
-       gameLogic.getLogicMatriz()[posX][posY+1] = empty;
-       if(gameLogic.getLogicMatriz()[posX][posY].getCode()==6){
-           gameLogic.getLogicMatriz()[posX][posY] = gameLogic.getHero();
+       if(gameLogic.getLogicMatriz()[posY][posX+1].getCode()==7){
+       
        }
+       else{
+          gameLogic.getLogicMatriz()[posY][posX+1] = empty; 
+       }
+       
+       gameLogic.getLogicMatriz()[posY][posX] = gameLogic.getHero();
+       
        
        
        
